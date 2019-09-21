@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kalpana 2019 Timer</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <link href="https://fonts.googleapis.com/css?family=Exo+2|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+<table cellpadding="0" cellspacing="0">
+   <tr>
+      <td align="left">
+            <div class="box">
+                    <h2 style="font-family: 'Exo 2',sans-serif;" id="timertext">Time Left</h2>
+                    <h3 style="font-family: 'Exo 2',sans-serif;" id="timer"></h3>
+                    </div>
+      </td>
+   </tr>
+</table>
+        <!-- <center> -->
+        
+            <!-- </center> -->
+            <script>
+                var deadline = new Date("Sep 21, 2019 22:28:15").getTime(); 
+                var x = setInterval(function() { 
+                var now = new Date().getTime(); 
+                var t = deadline - now; 
+                var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+                var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+                var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+                var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+                if(seconds<10){
+                    seconds="0"+seconds;
+                    }
+                if(hourss<10){
+                    hours="0"+hours;
+                    }
+                if(minutes<10){
+                    minutes="0"+minutes;
+                    }
+                document.getElementById("timer").innerHTML = hours + ":" + minutes + ":" + seconds; 
+                    if (t < 0) { 
+                        clearInterval(x); 
+                        // document.getElementById("timertext").style.visibility = "hidden";
+                        document.getElementById("timer").innerHTML = "Time's Up!"; 
+                    } 
+                }, 1000);
+            </script>
+    </body>
+</html>

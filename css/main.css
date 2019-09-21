@@ -1,0 +1,41 @@
+html { 
+    background: url('../assets/bg.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.box {
+    /* padding: 10%,10%; */
+    text-align: center;
+    color: white;
+}
+
+h3 {
+    /* font-size: 5rem; */
+    font-size: calc(120px + .5vw);
+}
+
+h2 {
+    /* font-size: 2.7rem;*/
+    font-size: calc(75px + .5vw);
+}
+
+table 
+{
+height: 100%;
+width: 100%;
+vertical-align: middle;
+}
