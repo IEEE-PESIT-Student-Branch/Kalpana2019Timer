@@ -10,7 +10,7 @@
    <tr>
       <td align="left">
             <div class="box">
-                    <h2 style="font-family: 'Exo 2',sans-serif;" id="timertext">Time Left</h2>
+                    <h2 style="font-family: 'Exo 2',sans-serif;" id="timertext">Timer Left</h2>
                     <h3 style="font-family: 'Exo 2',sans-serif;" id="timer"></h3>
                     </div>
       </td>
@@ -20,7 +20,7 @@
         
             <!-- </center> -->
             <script>
-                var deadline = new Date("Sep 21, 2019 22:28:15").getTime(); 
+                var deadline = new Date("Sep 23, 2019 22:30:00").getTime(); 
                 var x = setInterval(function() { 
                 var now = new Date().getTime(); 
                 var t = deadline - now; 
@@ -31,7 +31,7 @@
                 if(seconds<10){
                     seconds="0"+seconds;
                     }
-                if(hourss<10){
+                if(hours<10){
                     hours="0"+hours;
                     }
                 if(minutes<10){
@@ -40,7 +40,7 @@
                 document.getElementById("timer").innerHTML = hours + ":" + minutes + ":" + seconds; 
                     if (t < 0) { 
                         clearInterval(x); 
-                        // document.getElementById("timertext").style.visibility = "hidden";
+                        document.getElementById("timertext").style.display = "none";
                         document.getElementById("timer").innerHTML = "Time's Up!"; 
                     } 
                 }, 1000);

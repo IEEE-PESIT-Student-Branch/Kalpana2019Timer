@@ -1,5 +1,5 @@
 html { 
-    background: url('../assets/bg.jpg') no-repeat center center fixed; 
+    background: url('../assets/bg1.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -24,13 +24,17 @@ body{
 }
 
 h3 {
-    /* font-size: 5rem; */
-    font-size: calc(120px + .5vw);
+    font-size: 4.6rem;
+    /* font-size: calc(120px + .5vw); */
+    margin-block-start: 0%;
+    margin-block-end: 0%;
 }
 
 h2 {
-    /* font-size: 2.7rem;*/
-    font-size: calc(75px + .5vw);
+    font-size: 2.7rem;
+    /* font-size: calc(75px + .5vw); */
+    margin-block-start: 0%;
+    margin-block-end: 2%;
 }
 
 table 
