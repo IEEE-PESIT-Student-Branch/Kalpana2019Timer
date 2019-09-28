@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Kalpana 2019 Timer</title>
-        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="main.css" />
         <link href="https://fonts.googleapis.com/css?family=Exo+2|Open+Sans+Condensed:300&display=swap" rel="stylesheet">
     </head>
     <body>
@@ -17,17 +17,27 @@
    </tr>
 </table>
         <!-- <center> -->
-        
+        <% var l = last; %>
+        <% var n = now; %>
             <!-- </center> -->
             <script>
-                var deadline = new Date("Sep 23, 2019 22:30:00").getTime(); 
-                var x = setInterval(function() { 
-                var now = new Date().getTime(); 
-                var t = deadline - now; 
-                var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
-                var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
-                var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
-                var seconds = Math.floor((t % (1000 * 60)) / 1000); 
+                var deadline = <%= l %>; 
+                var nowt = <%= n %>;
+                var x = setInterval(function() {  
+                var t = deadline - nowt; 
+                nowt = nowt+1000;
+                t = t/1000;
+                console.log(t);
+                // var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
+                // var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
+                var hours = Math.floor(t/(60*60));
+                t = t-(hours*60*60); 
+                // var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
+                var minutes = Math.floor(t/(60));
+                t = t-(minutes*60); 
+                // var seconds = Math.floor((t % (1000 * 60)) / 1000);
+                var seconds = Math.floor(t);
+                // console.log(seconds);
                 if(seconds<10){
                     seconds="0"+seconds;
                     }
